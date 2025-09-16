@@ -160,6 +160,24 @@ body{
   cursor: pointer;
 }
 
+.hamburger{
+  display: none;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.hamburger .line{
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-top: 4px;
+
+}
+
+#nav-toggle{
+  display: none;
+}
+
 @media screen and (max-width: 500px){
   .container{
     width: 70%;
@@ -179,5 +197,19 @@ body{
 
   .detail-product .desc-product{
     width: 100%;
+  }
+
+  .hamburger{
+    display: flex;
+  }
+
+  .nav ul{
+    display: none;
+  }
+
+  #nav-toggle:checked + label + ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: -5px;
   }
 }
