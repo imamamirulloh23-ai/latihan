@@ -42,6 +42,12 @@ body{
   padding: 5px;
 }
 
+.nav .nav-link{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .nav ul li:hover {
   color: black;
   background-color: white;
@@ -203,13 +209,17 @@ body{
     display: flex;
   }
 
-  .nav ul{
+  .nav .nav-link{
     display: none;
   }
 
-  #nav-toggle:checked + label + ul{
+  #nav-toggle:checked + label + .nav-link{
     display: flex;
     flex-direction: column;
-    margin-left: -5px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      margin-left: -5px;
+    }
   }
 }
